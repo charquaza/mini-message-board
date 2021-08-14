@@ -1,0 +1,11 @@
+extends layout 
+
+block content
+    h1 New Message
+    form(action='/new' method='POST')
+        label(for='text') Message: 
+        input(type='textarea' name='text' id='text' required=true)
+        label(for='user') Username: 
+        input(type='text' name='user' id='user' required=true)
+        button(type='submit') Submit
+    a(href="/") Cancel
